@@ -32,9 +32,18 @@ describe('add', () => {
     test('adds numbers with a custom delimiter', () => {
         expect(add("//;\n1;2")).toBe(3);
     });
-    test('adds numbers with multiple custom delimiters', () => {
-        expect(add("//;\n1;2")).toBe(3);
+
+    test('adds numbers with long custom delimiter', () => {
+        expect(add("//;;&\n3;;&4")).toBe(7);
     });
+
+    test('throws an exception for a single negative number', () => {
+        expect(() => add("-1,2")).toThrow("negative numbers not allowed -1");
+    });
+
+    // test('adds numbers with multiple custom delimiters', () => {
+    //     expect(add("//;\n1;2")).toBe(3);
+    // });
 
 
 
