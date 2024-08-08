@@ -24,4 +24,8 @@ describe('add', () => {
     test('adds multiple numbers with new lines and comma', () => {
         expect(add(",1\n2\n3")).toBe(6);
     });
+
+    test('adds multiple numbers with new lines and multiple commas/new line in between or end', () => {
+        expect(add(",1\n\n\n2\n3,,,,")).toBe(6);
+    });
 });
