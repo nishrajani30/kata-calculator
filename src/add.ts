@@ -1,3 +1,3 @@
-export function add(nums: string): number {
+export function add(numbers: string): number {
     throw new Error("Not implemented");
 }
