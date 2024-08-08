@@ -13,7 +13,7 @@ A simple string calculator that can handle various delimiters and supports multi
 ## Installation
 
 To get started with the Kata calculator, you need to have [Node.js](https://nodejs.org/).
-For this demo, we have used [pnpm](https://pnpm.io/) but you can also run the application using npm or yarn or bun.
+For this demo, we have used [pnpm](https://pnpm.io/) but you can also run the application using npm.
 
 1. Clone the repository:
    ```bash
@@ -21,14 +21,12 @@ For this demo, we have used [pnpm](https://pnpm.io/) but you can also run the ap
    cd kata-calculator
     ```
 
-2. Install dependencies using pnpm (or npm, or yarn or bun):
+2. Install dependencies using pnpm (or npm):
 
     ```
     pnpm install
     
     # npm install
-    # yarn install
-    # bun install
     ```
 
 
