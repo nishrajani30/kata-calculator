@@ -9,5 +9,9 @@ export function add(numbers: string): number {
         return parseInt(numbers, 10);
     }
 
-    throw new Error("Not implemented");
+    // Split the input string by commas and new lines
+    const numberStrings = numbers.split(/[,]/); // Split by both new lines and commas
+
+    // Convert the split strings to numbers and calculate the sum
+    return numberStrings.reduce((acc, num) => acc + parseInt(num, 10), 0);
 }
