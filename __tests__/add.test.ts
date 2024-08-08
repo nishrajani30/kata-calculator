@@ -52,4 +52,8 @@ describe('add', () => {
     test('throws an exception for multiple negative numbers', () => {
         expect(() => add("1,-2,3,-4")).toThrow("negative numbers not allowed -2,-4");
     });
+
+    test('throws an exception for non-numeric input', () => {
+        expect(() => add("1,a,3")).toThrow("invalid input: a");
+    });
 });
