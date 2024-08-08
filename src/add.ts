@@ -18,10 +18,13 @@ export function add(numbers: string): number {
         numbers = numbers.substring(delimiterEndIndex + 1); // Get the numbers part
     }
 
-
     // Split the numbers using the delimiter
     const numberStrings = numbers.split(delimiter);
-    const numberArr: number[] = numberStrings.map(num => {
+
+    const nums: number[] = numberStrings.map(num => {
+        if (num === "") {
+            return 0;
+        }
         const parsedNum = parseInt(num, 10);
         if (isNaN(parsedNum)) {
             throw new Error(`invalid input: ${num}`);
@@ -30,7 +33,7 @@ export function add(numbers: string): number {
     });
 
     // Check for negative numbers
-    const negativeNumbers = numberArr.filter(num => num < 0);
+    const negativeNumbers = nums.filter(num => num < 0);
     if (negativeNumbers.length > 0) {
         throw new Error(`negative numbers not allowed ${negativeNumbers.join(",")}`);
     }
