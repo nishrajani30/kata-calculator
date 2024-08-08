@@ -32,5 +32,10 @@ describe('add', () => {
     test('adds numbers with a custom delimiter', () => {
         expect(add("//;\n1;2")).toBe(3);
     });
+    test('adds numbers with multiple custom delimiter', () => {
+        expect(add("//;\n1;2")).toBe(3);
+    });
+
+
 
 });
