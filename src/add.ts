@@ -10,7 +10,7 @@ export function add(numbers: string): number {
     }
 
     // Split the input string by commas and new lines
-    const numberStrings = numbers.split(/[,]/); // Split by both new lines and commas
+    const numberStrings = numbers.split(/[\n,]/); // Split by both new lines and commas
 
     // Convert the split strings to numbers and calculate the sum
     return numberStrings.reduce((acc, num) => acc + parseInt(num, 10), 0);

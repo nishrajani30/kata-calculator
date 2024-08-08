@@ -16,4 +16,8 @@ describe('add', () => {
     test('adds a large number of inputs', () => {
         expect(add("101,202,303,404,505,606,707,808,909,1010")).toBe(5555);
     });
+
+    test('adds numbers separated by new lines', () => {
+        expect(add("1\n2,3")).toBe(6);
+    });
 });
