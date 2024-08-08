@@ -28,4 +28,9 @@ describe('add', () => {
     test('adds multiple numbers with new lines and multiple commas/new line in between or end', () => {
         expect(add(",1\n\n\n2\n3,,,,")).toBe(6);
     });
+
+    test('adds numbers with a custom delimiter', () => {
+        expect(add("//;\n1;2")).toBe(3);
+    });
+
 });
